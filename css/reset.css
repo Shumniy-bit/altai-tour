@@ -1,0 +1,90 @@
+/* ------------------------------- 
+   CSS Reset (Обнуление стилей)
+   ------------------------------- */
+
+/* 1. Удаляем все внешние и внутренние отступы */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2. Плавный скролл для якорных ссылок */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 3. Базовые настройки для body */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #fff;
+  color: #1A2B2C;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 4. Убираем стандартные стили списков */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 5. Убираем подчеркивание у ссылок и наследуем цвет */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 6. Убираем рамку у изображений */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 7. Наследуем шрифты для полей форм */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+/* 8. Убираем стандартные стили у кнопок */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* 9. Доступный фокус (лучше не удалять совсем, а стилизовать) */
+:focus-visible {
+  outline: 2px solid #4a90e2;
+  outline-offset: 2px;
+}
+
+/* 10. Убираем стандартные стили заголовков (сохраняем семантику) */
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* 11. Убираем кавычки у цитат */
+blockquote,
+q {
+  quotes: none;
+}
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: '';
+}

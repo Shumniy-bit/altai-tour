@@ -1,0 +1,960 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO: Добавлено описание для поисковиков -->
+    <meta
+      name="description"
+      content="Авторские туры по Горному Алтаю. Экскурсии по Чуйскому тракту, походы к Белухе, сплавы по Катуни. Путешествия в мини-группах с опытными гидами."
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Убедитесь, что reset.css подключен внутри styles.css или отдельно -->
+    <title>Алтай Тур - Экскурсии и отдых в Горном Алтае</title>
+  </head>
+  <body>
+    <div class="wrapper" id="app">
+      <header class="header">
+        <div class="container">
+          <div class="header__content">
+            <div class="header__logo">
+              <a href="/" class="header__logo-link">
+                <!-- Путь исправлен на относительный -->
+                <img src="images/logo.png" alt="Алтай Тур логотип" />
+              </a>
+            </div>
+
+            <!-- Добавляем кнопку бургер-меню -->
+            <button
+              class="burger-menu"
+              aria-label="Открыть меню"
+              aria-expanded="false"
+            >
+              <span class="burger-menu__line"></span>
+              <span class="burger-menu__line"></span>
+              <span class="burger-menu__line"></span>
+            </button>
+
+            <nav class="header__nav">
+              <ul class="header__ul">
+                <li class="header__li">
+                  <a href="#home" class="header__li_a">Главная</a>
+                </li>
+                <li class="header__li">
+                  <a href="#about" class="header__li_a">О нас</a>
+                </li>
+                <li class="header__li">
+                  <a href="#tours-list" class="header__li_a">Туры</a>
+                </li>
+                <li class="header__li">
+                  <a href="#contacts" class="header__li_a">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <section id="home" class="hero">
+        <div class="container">
+          <div class="hero__content">
+            <div class="hero__text">Откройте для себя Горный Алтай</div>
+            <!-- Путь исправлен -->
+            <img
+              src="images/logo.png"
+              alt="Алтайский орнамент"
+              class="hero__img"
+            />
+            <h1 class="hero__main-text">Экскурсии по Алтаю</h1>
+            <h3 class="hero__low-text">
+              Путешествие к сердцу Сибири: величественные горы, бирюзовые реки и
+              захватывающие дух перевалы ждут вас.
+            </h3>
+            <a href="#tours-list" class="hero__btn all_btn">Выбрать тур</a>
+          </div>
+        </div>
+      </section>
+      <section id="about" class="cards">
+        <div class="cards__wrapper">
+          <div class="container">
+            <div class="cards__content">
+              <div class="card">
+                <svg class="card__icon" width="60" height="60">
+                  <use href="#icon-tour"></use>
+                </svg>
+                <h3 class="card__main-text">Авторские туры</h3>
+                <p class="card__text">
+                  Уникальные маршруты по Чуйскому тракту и местам силы.
+                </p>
+              </div>
+              <div class="card">
+                <svg class="card__icon" width="60" height="60">
+                  <use href="#icon-world"></use>
+                </svg>
+                <h3 class="card__main-text">Исследуйте Алтай</h3>
+                <p class="card__text">
+                  Гейзеровое озеро, Марс, Кату-Ярык и другие чудеса природы.
+                </p>
+              </div>
+              <div class="card">
+                <svg class="card__icon" width="60" height="60">
+                  <use href="#icon-adventure"></use>
+                </svg>
+                <h3 class="card__main-text">Активный отдых</h3>
+                <p class="card__text">
+                  Сплавы по Катуни, конные прогулки и треккинг к ледникам.
+                </p>
+              </div>
+              <div class="card">
+                <svg class="card__icon" width="60" height="60">
+                  <use href="#icon-hotel"></use>
+                </svg>
+                <h3 class="card__main-text">Уютные базы</h3>
+                <p class="card__text">
+                  Комфортное проживание на турбазах и в эко-отелях среди гор.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="travel">
+        <div class="container">
+          <div class="travel__content">
+            <div class="travel__text">
+              <div class="travel__container">
+                <h3 class="travel__main">Только лучшие маршруты</h3>
+                <div class="travel__about">
+                  Мы знаем каждый поворот Чуйского тракта. Наши гиды — местные
+                  жители, которые покажут вам Алтай с той стороны, которую не
+                  видят обычные туристы.
+                </div>
+                <a href="#" class="travel__btn all_btn" id="learnMoreBtn"
+                  >Узнать больше</a
+                >
+              </div>
+            </div>
+            <div class="travel__images">
+              <!-- Путь исправлен -->
+              <img src="images/travel.jpg" alt="Озеро на Алтае" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="travel-details" id="travelDetails" style="display: none">
+        <div class="container">
+          <div class="travel-details__content">
+            <h3 class="travel-details__title">Подробнее о наших маршрутах</h3>
+            <div class="travel-details__grid">
+              <div class="travel-details__item">
+                <div class="travel-details__icon">🏔️</div>
+                <h4>Чуйский тракт</h4>
+                <p>
+                  Легендарная дорога М-52 входит в топ-10 самых красивых дорог
+                  мира. Мы проедем по самым живописным участкам: Семинский
+                  перевал, Чике-Таман, слияние Чуи и Катуни.
+                </p>
+              </div>
+              <div class="travel-details__item">
+                <div class="travel-details__icon">🏕️</div>
+                <h4>Проживание</h4>
+                <p>
+                  Комфортабельные базы отдыха и эко-отели с видом на горы. Есть
+                  варианты размещения в традиционных алтайских аилах для полного
+                  погружения в культуру.
+                </p>
+              </div>
+              <div class="travel-details__item">
+                <div class="travel-details__icon">🚙</div>
+                <h4>Транспорт</h4>
+                <p>
+                  Внедорожники повышенной проходимости для труднодоступных мест.
+                  Комфортабельные минивэны для путешествий по основным
+                  достопримечательностям.
+                </p>
+              </div>
+              <div class="travel-details__item">
+                <div class="travel-details__icon">🍯</div>
+                <h4>Питание</h4>
+                <p>
+                  Трехразовое питание включено в стоимость. Вы попробуете блюда
+                  алтайской кухни: мёд, травяные чаи, блюда из марала и
+                  свежайшую форель.
+                </p>
+              </div>
+              <div class="travel-details__item">
+                <div class="travel-details__icon">📸</div>
+                <h4>Фотосопровождение</h4>
+                <p>
+                  Наш гид — профессиональный фотограф. Вы получите не только
+                  впечатления, но и качественные снимки на память о путешествии.
+                </p>
+              </div>
+              <div class="travel-details__item">
+                <div class="travel-details__icon">🗓️</div>
+                <h4>Сезонность</h4>
+                <p>
+                  Туры проводятся круглый год. Летом — сплавы и треккинг, зимой
+                  — снегоходные туры и катание на собачьих упряжках, весной —
+                  цветение маральника.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="photo">
+        <div class="container">
+          <div class="photo__content">
+            <div class="collage-container">
+              <div class="circle circle-1"></div>
+              <div class="circle circle-2"></div>
+              <div class="circle circle-3"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bag">
+        <div class="container">
+          <div class="bag__content">
+            <h4 class="bag__main">Походы с рюкзаком</h4>
+            <p class="bag__text">
+              Многодневные походы к подножию Белухи, Шавлинским озерам или плато
+              Укок. Полное погружение в дикую природу, ночевки в палатках под
+              звездным небом и песни у костра. Опытные инструкторы обеспечат
+              безопасность на всем маршруте.
+            </p>
+            <a href="#contacts" class="bag__btn all_btn"
+              >Узнать расписание походов</a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="travel-group">
+        <div class="container">
+          <div class="travel-group__content">
+            <h4 class="travel-group__h4">
+              Путешествия в мини-группах по Алтаю
+            </h4>
+            <div class="travel-group__card">
+              <div class="travel-group__container">
+                <div class="travel-group__instruments">
+                  <div class="travel-group__text">
+                    Мы не набираем большие автобусы. Максимальный размер группы
+                    — 8 человек. Это позволяет нам проезжать туда, куда не
+                    доедет большой транспорт, и уделять максимум внимания
+                    каждому путешественнику. Увидеть слияние Чуи и Катуни,
+                    подняться на перевал Кату-Ярык и попробовать настоящий
+                    алтайский мёд — в уютной компании единомышленников.
+                  </div>
+                  <a href="#contacts" class="travel-group__btn"
+                    >Все направления</a
+                  >
+                </div>
+                <div class="travel-group__img">
+                  <img
+                    src="images/man-mapa.jpg"
+                    alt="Группа туристов на Алтае"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="tours-section" id="tours-list">
+        <div class="container">
+          <div class="tours-section__content">
+            <h2 class="tours-section__title">Популярные туры по Алтаю</h2>
+            <p class="tours-section__subtitle">Выберите путешествие по душе</p>
+
+            <div class="tours-grid">
+              <!-- Тур 1 -->
+              <div class="tour-item">
+                <div class="tour-item__badge">Хит продаж</div>
+                <div class="tour-item__image">
+                  <img src="images/tour-1.jpg" alt="Золотое кольцо Алтая" />
+                </div>
+                <div class="tour-item__content">
+                  <div class="tour-item__duration">
+                    <svg
+                      class="tour-item__icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                    7 дней / 6 ночей
+                  </div>
+                  <h3 class="tour-item__title">Золотое кольцо Алтая</h3>
+                  <p class="tour-item__description">
+                    Большое путешествие по главным достопримечательностям:
+                    Чуйский тракт, Телецкое озеро, Каракольские озера, перевал
+                    Кату-Ярык.
+                  </p>
+                  <div class="tour-item__features">
+                    <span class="tour-item__feature">
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                      >
+                        <path d="M20 12H4M12 4v16" />
+                      </svg>
+                      Группа до 8 чел.
+                    </span>
+                    <span class="tour-item__feature">
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                      >
+                        <path d="M3 12h18M12 3v18" />
+                      </svg>
+                      Сложность: средняя
+                    </span>
+                  </div>
+                  <div class="tour-item__footer">
+                    <div class="tour-item__price">
+                      <span class="tour-item__price-old">59 900 ₽</span>
+                      <span class="tour-item__price-current">49 900 ₽</span>
+                    </div>
+                    <a href="#contacts" class="tour-item__btn">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Тур 2 -->
+              <div class="tour-item">
+                <div class="tour-item__badge tour-item__badge--new">
+                  Новинка
+                </div>
+                <div class="tour-item__image">
+                  <img src="images/tour-2.jpg" alt="К подножию Белухи" />
+                </div>
+                <div class="tour-item__content">
+                  <div class="tour-item__duration">
+                    <svg
+                      class="tour-item__icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                    10 дней / 9 ночей
+                  </div>
+                  <h3 class="tour-item__title">К подножию Белухи</h3>
+                  <p class="tour-item__description">
+                    Треккинг к высочайшей вершине Сибири. Акклиматизация,
+                    радиальные выходы к Аккемскому озеру и ледникам.
+                  </p>
+                  <div class="tour-item__features">
+                    <span class="tour-item__feature">
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                      >
+                        <path d="M20 12H4M12 4v16" />
+                      </svg>
+                      Группа до 6 чел.
+                    </span>
+                    <span class="tour-item__feature">
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                      >
+                        <path d="M3 12h18M12 3v18" />
+                      </svg>
+                      Сложность: высокая
+                    </span>
+                  </div>
+                  <div class="tour-item__footer">
+                    <div class="tour-item__price">
+                      <span class="tour-item__price-current">69 900 ₽</span>
+                    </div>
+                    <a href="#contacts" class="tour-item__btn">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Тур 3 -->
+              <div class="tour-item">
+                <div class="tour-item__badge tour-item__badge--discount">
+                  -15%
+                </div>
+                <div class="tour-item__image">
+                  <img src="images/tour-3.jpg" alt="Марс и Гейзеровое озеро" />
+                </div>
+                <div class="tour-item__content">
+                  <div class="tour-item__duration">
+                    <svg
+                      class="tour-item__icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                    5 дней / 4 ночи
+                  </div>
+                  <h3 class="tour-item__title">Марс и Гейзеровое озеро</h3>
+                  <p class="tour-item__description">
+                    Инопланетные пейзажи Алтая: цветные горы Кызыл-Чин,
+                    бирюзовое Гейзеровое озеро и захватывающие дух панорамы.
+                  </p>
+                  <div class="tour-item__features">
+                    <span class="tour-item__feature">
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                      >
+                        <path d="M20 12H4M12 4v16" />
+                      </svg>
+                      Группа до 10 чел.
+                    </span>
+                    <span class="tour-item__feature">
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                      >
+                        <path d="M3 12h18M12 3v18" />
+                      </svg>
+                      Сложность: легкая
+                    </span>
+                  </div>
+                  <div class="tour-item__footer">
+                    <div class="tour-item__price">
+                      <span class="tour-item__price-old">39 900 ₽</span>
+                      <span class="tour-item__price-current">33 900 ₽</span>
+                    </div>
+                    <a href="#contacts" class="tour-item__btn">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Тур 4 -->
+              <div class="tour-item">
+                <div class="tour-item__image">
+                  <img src="images/tour-4.jpg" alt="Сплав по Катуни" />
+                </div>
+                <div class="tour-item__content">
+                  <div class="tour-item__duration">
+                    <svg
+                      class="tour-item__icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                    6 дней / 5 ночей
+                  </div>
+                  <h3 class="tour-item__title">Сплав по Катуни</h3>
+                  <p class="tour-item__description">
+                    Активный отдых на воде: прохождение порогов, ночевки в
+                    палатках на берегу, рыбалка и баня под звездами.
+                  </p>
+                  <div class="tour-item__features">
+                    <span class="tour-item__feature">
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                      >
+                        <path d="M20 12H4M12 4v16" />
+                      </svg>
+                      Группа до 12 чел.
+                    </span>
+                    <span class="tour-item__feature">
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                      >
+                        <path d="M3 12h18M12 3v18" />
+                      </svg>
+                      Сложность: средняя
+                    </span>
+                  </div>
+                  <div class="tour-item__footer">
+                    <div class="tour-item__price">
+                      <span class="tour-item__price-current">44 900 ₽</span>
+                    </div>
+                    <a href="#contacts" class="tour-item__btn">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Тур 5 -->
+              <div class="tour-item">
+                <div class="tour-item__badge tour-item__badge--season">
+                  Сезонное
+                </div>
+                <div class="tour-item__image">
+                  <img src="images/tour-5.jpg" alt="Цветение маральника" />
+                </div>
+                <div class="tour-item__content">
+                  <div class="tour-item__duration">
+                    <svg
+                      class="tour-item__icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                    4 дня / 3 ночи
+                  </div>
+                  <h3 class="tour-item__title">Цветение маральника</h3>
+                  <p class="tour-item__description">
+                    Весенний фототур в период цветения алтайской сакуры. Розовые
+                    склоны гор и лучшие видовые площадки.
+                  </p>
+                  <div class="tour-item__features">
+                    <span class="tour-item__feature">
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                      >
+                        <path d="M20 12H4M12 4v16" />
+                      </svg>
+                      Фотогид
+                    </span>
+                    <span class="tour-item__feature">
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                      >
+                        <path d="M3 12h18M12 3v18" />
+                      </svg>
+                      Май-июнь
+                    </span>
+                  </div>
+                  <div class="tour-item__footer">
+                    <div class="tour-item__price">
+                      <span class="tour-item__price-current">29 900 ₽</span>
+                    </div>
+                    <a href="#contacts" class="tour-item__btn">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Тур 6 -->
+              <div class="tour-item">
+                <div class="tour-item__badge tour-item__badge--winter">
+                  Зимний
+                </div>
+                <div class="tour-item__image">
+                  <img src="images/tour-6.jpg" alt="Зимний Алтай" />
+                </div>
+                <div class="tour-item__content">
+                  <div class="tour-item__duration">
+                    <svg
+                      class="tour-item__icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                    5 дней / 4 ночи
+                  </div>
+                  <h3 class="tour-item__title">Зимняя сказка Алтая</h3>
+                  <p class="tour-item__description">
+                    Катание на снегоходах, собачьих упряжках, незамерзающие
+                    водопады и термальные источники.
+                  </p>
+                  <div class="tour-item__features">
+                    <span class="tour-item__feature">
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                      >
+                        <path d="M20 12H4M12 4v16" />
+                      </svg>
+                      Группа до 8 чел.
+                    </span>
+                    <span class="tour-item__feature">
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                      >
+                        <path d="M3 12h18M12 3v18" />
+                      </svg>
+                      Декабрь-март
+                    </span>
+                  </div>
+                  <div class="tour-item__footer">
+                    <div class="tour-item__price">
+                      <span class="tour-item__price-current">54 900 ₽</span>
+                    </div>
+                    <a href="#contacts" class="tour-item__btn">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tours-section__more">
+              <a href="#contacts" class="tours-section__more-btn"
+                >Узнать больше</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="tour">
+        <div class="container">
+          <div class="tour__content">
+            <h2 class="tour__main">
+              Наслаждайтесь идеальным сочетанием приключений
+            </h2>
+            <div class="tour__cards">
+              <div class="tour__card">
+                <div class="tour__card_img">
+                  <img src="images/mount-min.jpg" alt="Горы Алтая" />
+                </div>
+                <div class="tour__card_main">Горные вершины</div>
+                <div class="tour__card_text">
+                  Восхождения на обзорные пики, откуда открывается панорама на
+                  весь Алтайский край.
+                </div>
+              </div>
+              <div class="tour__card">
+                <div class="tour__card_img">
+                  <img src="images/man_water.jpg" alt="Водопад на Алтае" />
+                </div>
+                <div class="tour__card_main">Водопады и реки</div>
+                <div class="tour__card_text">
+                  Прогулки к шумным водопадам и спокойный отдых на берегах
+                  чистейших горных рек.
+                </div>
+              </div>
+              <div class="tour__card">
+                <div class="tour__card_img">
+                  <img src="images/rouad.jpg" alt="Дорога на Алтае" />
+                </div>
+                <div class="tour__card_main">
+                  Путешествие по Чуйскому тракту
+                </div>
+                <div class="tour__card_text">
+                  Автомобильные экскурсии по одной из самых красивых дорог мира
+                  с остановками в лучших локациях.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="reviews">
+        <div class="container">
+          <div class="reviews__content">
+            <div class="reviews__card">
+              <svg class="reviews__card_icon">
+                <use href="#icon-quote"></use>
+              </svg>
+              <div class="reviews__text">
+                Спасибо за незабываемую поездку! Виды на Кату-Ярык просто
+                космические. Организация на высшем уровне, гид Иван рассказывал
+                очень интересные легенды Алтая.
+              </div>
+              <div class="reviews__author">Анна Михайлова</div>
+            </div>
+            <div class="reviews__card">
+              <svg class="reviews__card_icon">
+                <use href="#icon-quote"></use>
+              </svg>
+              <div class="reviews__text">
+                Ездили в поход к Шавлинским озерам. Всё было продумано до
+                мелочей: питание, темп передвижения, дневки. Рекомендую всем,
+                кто любит настоящую дикую природу!
+              </div>
+              <div class="reviews__author">Сергей Ветров</div>
+            </div>
+            <div class="reviews__card">
+              <svg class="reviews__card_icon">
+                <use href="#icon-quote"></use>
+              </svg>
+              <div class="reviews__text">
+                Отличный вариант для первого знакомства с Алтаем. Маршрут по
+                Чуйскому тракту очень насыщенный, но при этом мы не устали.
+                Обязательно вернемся в следующем году за новыми впечатлениями.
+              </div>
+              <div class="reviews__author">Елена и Дмитрий</div>
+            </div>
+            <div class="reviews__card">
+              <svg class="reviews__card_icon">
+                <use href="#icon-quote"></use>
+              </svg>
+              <div class="reviews__text">
+                Понравилось всё: от встречи в аэропорту до прощания. Посетили
+                Марс, Гейзеровое озеро и даже покатались на лошадях. Огромное
+                спасибо команде Алтай Тур!
+              </div>
+              <div class="reviews__author">Игорь Савельев</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="national">
+        <div class="container">
+          <div class="national__content">
+            <h3 class="national__main">Туры: Природа и дикий мир</h3>
+            <p class="national__text">
+              Путешествуйте с единомышленниками, останавливайтесь в палатках у
+              реки или на уютных базах — это ваш идеальный отпуск мечты!
+            </p>
+            <div class="national__svgs">
+              <a href="#" class="national__svg">
+                <svg>
+                  <use href="#icon-facebook"></use>
+                </svg>
+              </a>
+              <a href="#" class="national__svg">
+                <svg>
+                  <use href="#icon-twitter"></use>
+                </svg>
+              </a>
+              <a href="#" class="national__svg">
+                <svg>
+                  <use href="#icon-instagram"></use>
+                </svg>
+              </a>
+              <a href="#" class="national__svg">
+                <svg>
+                  <use href="#icon-google"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contacts" class="contact-section">
+        <div class="container">
+          <div class="contact-section_content">
+            <h2 class="title">Свяжитесь с нами</h2>
+
+            <!-- Добавлен div для вывода сообщений валидации -->
+            <div id="form-feedback" class="form-feedback"></div>
+
+            <form class="contact-form">
+              <div class="input-row">
+                <input
+                  type="text"
+                  placeholder="Введите ваше имя"
+                  class="input-field"
+                  id="name"
+                />
+                <input
+                  type="email"
+                  placeholder="Введите ваш email"
+                  class="input-field"
+                  id="email"
+                />
+              </div>
+
+              <textarea
+                placeholder="Напишите ваш вопрос или пожелания к туру"
+                class="textarea-field"
+                id="message"
+              ></textarea>
+
+              <button type="submit" class="submit-btn">ОТПРАВИТЬ ЗАЯВКУ</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <footer class="footer-section">
+        <div class="container">
+          <p class="footer-text">2026 Алтай Тур. Все права защищены</p>
+        </div>
+      </footer>
+
+      <!-- Кнопка "Наверх" с индикатором прогресса -->
+      <button
+        class="scroll-to-top"
+        id="scrollToTop"
+        aria-label="Наверх"
+        title="Наверх"
+      >
+        <svg
+          class="scroll-to-top__progress"
+          width="60"
+          height="60"
+          viewBox="0 0 60 60"
+        >
+          <circle class="scroll-to-top__progress-circle"></circle>
+        </svg>
+        <div class="scroll-to-top__bg">
+          <svg
+            class="scroll-to-top__icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+          >
+            <path
+              d="M12 19V5M12 5L5 12M12 5L19 12"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </button>
+    </div>
+
+    <!-- Хранилище иконок  -->
+    <div style="display: none">
+      <svg xmlns="http://www.w3.org/2000/svg">
+        <!-- Иконка 1: Туристические туры -->
+        <symbol id="icon-tour" viewBox="0 0 512 512">
+          <path
+            d="m457 121h-106v-35c0-24.813-20.187-45-45-45h-100c-24.813 0-45 20.187-45 45v35h-106c-30.327 0-55 24.673-55 55v240c0 30.327 24.673 55 55 55h402c30.327 0 55-24.673 55-55v-240c0-30.327-24.673-55-55-55zm-266-35c0-8.271 6.729-15 15-15h100c8.271 0 15 6.729 15 15v35h-130zm-111 355h-25c-13.785 0-25-11.215-25-25v-240c0-13.785 11.215-25 25-25h25zm322 0h-292v-290h37.783c-3.129 7.621-4.699 15.551-4.653 23.752.104 18.544 8.698 33.732 15.126 42.52l-16.05 37.573c-1.854 4.342-1.557 9.304.804 13.393l55 95.263c2.778 4.812 7.82 7.503 13.004 7.503 2.544 0 5.124-.648 7.486-2.013l69.282-40c3.445-1.989 5.959-5.266 6.989-9.108 1.029-3.842.49-7.937-1.499-11.382l-55-95.263c-2.36-4.089-6.509-6.827-11.196-7.393l-43.872-5.285c-3.813-4.973-10.012-14.771-10.075-25.976-.046-8.146 3.068-15.903 9.464-23.583h219.407zm-229.26-181.268 12.276-28.737 31.026 3.737 43.75 75.777-43.302 25zm309.26 156.268c0 13.785-11.215 25-25 25h-25v-290h25c13.785 0 25 11.215 25 25z"
+          ></path>
+          <path
+            d="m326 271c24.813 0 45-20.187 45-45s-20.187-45-45-45-45 20.187-45 45 20.187 45 45 45zm0-60c8.271 0 15 6.729 15 15s-6.729 15-15 15-15-6.729-15-15 6.729-15 15-15z"
+          ></path>
+        </symbol>
+
+        <!-- Иконка 2: Исследуйте мир -->
+        <symbol id="icon-world" viewBox="0 0 512.963 512.963">
+          <path
+            d="m488.535 148.643c13.314-20.213 22.806-40.646 22.806-57.853-.001-50.061-40.739-90.79-90.813-90.79-23.041 0-44.101 8.628-60.13 22.817-32.77-14.59-67.702-22.004-103.917-22.004-68.381 0-132.668 26.637-181.021 75.005-48.351 48.366-74.979 112.67-74.979 181.07s26.628 132.705 74.979 181.071c48.352 48.367 112.64 75.004 181.021 75.004s132.669-26.637 181.021-75.004c48.351-48.366 74.979-112.672 74.979-181.071 0-37.894-8.062-74.275-23.946-108.245zm-68.007-118.643c33.532 0 60.812 27.271 60.812 60.79 0 17.762-22.311 52.803-58.227 91.45-.869.935-1.885 1.13-2.585 1.13-.701 0-1.718-.195-2.586-1.13-35.915-38.647-58.226-73.689-58.226-91.45 0-33.519 27.281-60.79 60.812-60.79zm-323.851 67.027c42.686-42.699 99.439-66.215 159.805-66.215 3.354 0 6.693.092 10.021.235v15.635c0 13.342-9.495 24.923-22.577 27.539l-20.696 4.14c-27.056 5.411-46.694 29.364-46.694 56.957v27.942c0 7.152-2.691 13.967-7.578 19.189l-27.935 29.853c-12.355 13.204-17.801 31.017-14.942 48.87 1.648 10.294-2.287 20.252-10.527 26.638-8.239 6.387-18.864 7.714-28.421 3.55l-40.55-17.664c-5.065-2.206-10.341-3.645-15.753-4.34-.223-4.137-.347-8.293-.347-12.468-.002-60.388 23.507-117.16 66.194-159.861zm-61.864 204.266 40.338 17.572c7.61 3.314 15.544 4.946 23.401 4.946 12.551 0 24.899-4.166 35.379-12.288 17.041-13.208 25.179-33.803 21.771-55.093-1.362-8.505 1.339-17.339 7.225-23.629l27.935-29.853c10.107-10.801 15.673-24.896 15.673-39.688v-27.942c0-13.341 9.495-24.923 22.577-27.539l20.696-4.14c27.056-5.411 46.694-29.364 46.694-56.957v-12.341c15.198 2.709 30.041 6.966 44.43 12.781-7.145 12.964-11.216 27.849-11.216 43.668 0 33.541 36.027 79.35 66.25 111.872 6.325 6.806 15.277 10.708 24.562 10.708 9.284 0 18.236-3.902 24.561-10.708 7.435-8 15.22-16.807 22.734-26.035 9.722 25.517 14.658 52.42 14.658 80.26 0 8.344-.465 16.616-1.352 24.795-11.451-6.412-24.879-8.603-37.932-5.985l-25.693 5.154c-7.718 1.549-15.848-.631-21.756-5.828-11.886-10.454-27.715-15.329-43.421-13.371-15.708 1.956-29.856 10.563-38.815 23.614l-27.68 40.323c-3.154 4.595-7.811 8.069-13.113 9.785l-17.873 5.782c-24.93 8.065-40.907 32.819-37.99 58.858l2.524 22.538c.283 2.522.186 5.066-.288 7.561l-9.128 48.067c-42.621-8.875-81.787-29.923-113.288-61.432-32.025-32.035-53.256-71.993-61.863-115.455zm381.473 115.456c-42.686 42.698-99.439 66.214-159.805 66.214-5.625 0-11.219-.205-16.772-.61l8.857-46.641c1.033-5.442 1.245-10.993.628-16.498l-2.524-22.538c-1.337-11.934 5.986-23.278 17.411-26.976l17.873-5.782c11.569-3.743 21.73-11.325 28.612-21.35l27.68-40.323c4.167-6.069 10.484-9.913 17.79-10.823 7.305-.908 14.373 1.266 19.9 6.128 12.891 11.338 30.635 16.092 47.469 12.716l25.694-5.154c7.239-1.453 14.735.313 20.566 4.844.168.131.34.258.514.382l5.07 3.604c-9.978 38.552-30.071 73.905-58.963 102.807z"
+          ></path>
+          <path
+            d="m420.528 106.686c7.846 0 15.363-6.899 15-15-.364-8.127-6.591-15-15-15-7.846 0-15.363 6.899-15 15 .364 8.127 6.591 15 15 15z"
+          ></path>
+        </symbol>
+
+        <!-- Иконка 3: Приключенческие каникулы -->
+        <symbol id="icon-adventure" viewBox="0 0 510 510">
+          <path d="m375 0h30v30h-30z"></path>
+          <path d="m450 120h30v30h-30z"></path>
+          <path d="m285 60h30v30h-30z"></path>
+          <path d="m180 15h30v30h-30z"></path>
+          <path
+            d="m90 195c28.704 0 55.933-13.89 72.837-37.156l14.746-20.295-24.857-3.385c-46.641-6.352-81.449-48.575-77.398-96.821l2.095-24.923-22.973 9.888c-33.077 14.237-54.45 46.696-54.45 82.692 0 49.626 40.374 90 90 90zm-43.537-131.3c6.685 42.453 35.401 77.388 74.207 92.826-9.178 5.463-19.766 8.474-30.67 8.474-33.084 0-60-26.916-60-60 0-15.685 6.087-30.362 16.463-41.3z"
+          ></path>
+          <path
+            d="m487.565 480-213.913-289.412 23.41-31.672-24.125-17.832-17.937 24.268-17.938-24.268-24.125 17.832 23.41 31.672-213.912 289.412h-22.435v30h510v-30zm-232.565-264.176 195.261 264.176h-82.026l-113.235-177.94-113.234 177.94h-82.027zm-15 264.176h-62.675l62.675-98.489zm30-98.489 62.675 98.489h-62.675z"
+          ></path>
+        </symbol>
+
+        <!-- Иконка 4: Роскошные отели -->
+        <symbol id="icon-hotel" viewBox="0 0 512 512">
+          <path
+            d="m406.312 482v-384.132h-39.99v-64.972h-95.322v-32.896h-30v32.896h-95.322v64.972h-39.99v384.132h-54.4v30h409.424v-30zm-230.634-419.104h160.644v34.972h-160.644zm140.634 419.104h-45.312v-109.629h45.312zm-75.312 0h-45.312v-109.629h45.312zm105.312 0v-139.629h-180.624v139.629h-30v-354.132h240.624v354.132z"
+          ></path>
+          <path d="m165.688 158.205h30v30h-30z"></path>
+          <path d="m316.312 158.205h30v30h-30z"></path>
+          <path d="m241 158.205h30v30h-30z"></path>
+          <path d="m165.688 218.541h30v30h-30z"></path>
+          <path d="m316.312 218.541h30v30h-30z"></path>
+          <path d="m241 218.541h30v30h-30z"></path>
+          <path d="m165.688 278.878h30v30h-30z"></path>
+          <path d="m316.312 278.878h30v30h-30z"></path>
+          <path d="m241 278.878h30v30h-30z"></path>
+        </symbol>
+
+        <!-- Иконка 5: Кавычки/отзывы -->
+        <symbol id="icon-quote" viewBox="0 0 95.333 95.332" fill="currentColor">
+          <g>
+            <g>
+              <path
+                d="M30.512,43.939c-2.348-0.676-4.696-1.019-6.98-1.019c-3.527,0-6.47,0.806-8.752,1.793    c2.2-8.054,7.485-21.951,18.013-23.516c0.975-0.145,1.774-0.85,2.04-1.799l2.301-8.23c0.194-0.696,0.079-1.441-0.318-2.045    s-1.035-1.007-1.75-1.105c-0.777-0.106-1.569-0.16-2.354-0.16c-12.637,0-25.152,13.19-30.433,32.076    c-3.1,11.08-4.009,27.738,3.627,38.223c4.273,5.867,10.507,9,18.529,9.313c0.033,0.001,0.065,0.002,0.098,0.002    c9.898,0,18.675-6.666,21.345-16.209c1.595-5.705,0.874-11.688-2.032-16.851C40.971,49.307,36.236,45.586,30.512,43.939z"
+              ></path>
+              <path
+                d="M92.471,54.413c-2.875-5.106-7.61-8.827-13.334-10.474c-2.348-0.676-4.696-1.019-6.979-1.019    c-3.527,0-6.471,0.806-8.753,1.793c2.2-8.054,7.485-21.951,18.014-23.516c0.975-0.145,1.773-0.85,2.04-1.799l2.301-8.23    c0.194-0.696,0.079-1.441-0.318-2.045c-0.396-0.604-1.034-1.007-1.75-1.105c-0.776-0.106-1.568-0.16-2.354-0.16    c-12.637,0-25.152,13.19-30.434,32.076c-3.099,11.08-4.008,27.738,3.629,38.225c4.272,5.866,10.507,9,18.528,9.312    c0.033,0.001,0.065,0.002,0.099,0.002c9.897,0,18.675-6.666,21.345-16.209C96.098,65.559,95.376,59.575,92.471,54.413z"
+              ></path>
+            </g>
+          </g>
+        </symbol>
+
+        <!-- Иконка Facebook -->
+        <symbol id="icon-facebook" viewBox="0 0 112 112" fill="currentColor">
+          <path
+            d="M75.5,28.8H65.4c-1.5,0-4,0.9-4,4.3v9.4h13.9l-1.5,15.8H61.4v45.1H42.8V58.3h-8.8V42.4h8.8V32.2 c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"
+          ></path>
+        </symbol>
+
+        <!-- Иконка Twitter -->
+        <symbol id="icon-twitter" viewBox="0 0 112 112" fill="currentColor">
+          <path
+            d="M92.2,38.2c0,0.8,0,1.6,0,2.3c0,24.3-18.6,52.4-52.6,52.4c-10.6,0.1-20.2-2.9-28.5-8.2 c1.4,0.2,2.9,0.2,4.4,0.2c8.7,0,16.7-2.9,23-7.9c-8.1-0.2-14.9-5.5-17.3-12.8c1.1,0.2,2.4,0.2,3.4,0.2c1.6,0,3.3-0.2,4.8-0.7 c-8.4-1.6-14.9-9.2-14.9-18c0-0.2,0-0.2,0-0.2c2.5,1.4,5.4,2.2,8.4,2.3c-5-3.3-8.3-8.9-8.3-15.4c0-3.4,1-6.5,2.5-9.2 c9.1,11.1,22.7,18.5,38,19.2c-0.2-1.4-0.4-2.8-0.4-4.3c0.1-10,8.3-18.2,18.5-18.2c5.4,0,10.1,2.2,13.5,5.7c4.3-0.8,8.1-2.3,11.7-4.5 c-1.4,4.3-4.3,7.9-8.1,10.1c3.7-0.4,7.3-1.4,10.6-2.9C98.9,32.3,95.7,35.5,92.2,38.2z"
+          ></path>
+        </symbol>
+
+        <!-- Иконка Instagram -->
+        <symbol id="icon-instagram" viewBox="0 0 112 112" fill="currentColor">
+          <path
+            d="M55.9,32.9c-12.8,0-23.2,10.4-23.2,23.2s10.4,23.2,23.2,23.2s23.2-10.4,23.2-23.2S68.7,32.9,55.9,32.9z M55.9,69.4c-7.4,0-13.3-6-13.3-13.3c-0.1-7.4,6-13.3,13.3-13.3s13.3,6,13.3,13.3C69.3,63.5,63.3,69.4,55.9,69.4z"
+          ></path>
+          <path
+            d="M79.7,26.8c-3,0-5.4,2.5-5.4,5.4s2.5,5.4,5.4,5.4c3,0,5.4-2.5,5.4-5.4S82.7,26.8,79.7,26.8z"
+          ></path>
+          <path
+            d="M78.2,11H33.5C21,11,10.8,21.3,10.8,33.7v44.7c0,12.6,10.2,22.8,22.7,22.8h44.7c12.6,0,22.7-10.2,22.7-22.7 V33.7C100.8,21.1,90.6,11,78.2,11z M91,78.4c0,7.1-5.8,12.8-12.8,12.8H33.5c-7.1,0-12.8-5.8-12.8-12.8V33.7 c0-7.1,5.8-12.8,12.8-12.8h44.7c7.1,0,12.8,5.8,12.8,12.8V78.4z"
+          ></path>
+        </symbol>
+
+        <!-- Иконка Google -->
+        <symbol id="icon-google" viewBox="0 0 112 112" fill="currentColor">
+          <path
+            d="M62.2,81.6c-8.6,11.2-24.6,14.4-37.6,10C10.9,87,0.8,73.2,1,58.5c-0.8-18,15.2-34.6,33.1-34.9 c9.2-0.8,18.2,2.7,25,8.6c-2.9,3.1-5.7,6.2-8.9,9.2c-6.2-3.8-13.5-6.5-20.6-4C18.1,40.7,11,54.2,15.4,65.6 c3.5,11.8,17.8,18.3,29.2,13.2c5.8-2.1,9.7-7.4,11.3-13.2c-6.6-0.1-13.2,0-20.1-0.3c0-3.9,0-7.9,0-11.9c11.2,0,22.2,0,33.3,0 C69.9,63.4,68.3,73.9,62.2,81.6z M110.9,63.7c-3.4,0-6.6,0-10,0c0,3.4,0,6.6,0,10c-3.4,0-6.6,0-10,0c0-3.4,0-6.6,0-10 c-3.4,0-6.6,0-10,0c0-3.4,0-6.6,0-10c3.4,0,6.6,0,10,0c0-3.4,0-6.6,0.1-10c3.4,0,6.6,0,10,0c0,3.4,0,6.6,0,10c3.4,0,6.6,0,10,0 C110.9,56.9,110.9,60.3,110.9,63.7z"
+          ></path>
+        </symbol>
+      </svg>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
